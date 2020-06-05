@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="employees-container">
+    <p class="crown">
+      <slot name="crown-img"></slot>
+    </p>
+    <br>
+    <br>
+    <div class="user-logo-container">
+      <slot name="employeeProfileImg"></slot>
+    </div>
+    <div>
+      <h2 class="employee-name">
+        <slot name="employeeName"></slot>
+      </h2>
+      <p class="employee-bio">
+        <slot name="employeeBio"></slot>
+      </p>
+      <slot class="roles" name="employeeRoles"></slot>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
