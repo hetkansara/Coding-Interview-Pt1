@@ -37,7 +37,7 @@ function getHTMLString(employees) {
     console.log(employee)
     htmlString += "<div class='info-content'>";
     htmlString += "<p class='crown'>";
-    htmlString += (employee.employeeisfeatured == "1") ? '<img slot="crown-img" class="crown-img" src="crown.png">' : '';;
+    htmlString += (employee.employeeisfeatured == "1") ? '<img slot="crown-img" class="crown-img" src="assets/images/crown.png">' : '';;
     htmlString += "</p><br><br>";
     htmlString += "<div class='user-logo-container'>";
     htmlString += '<img class="user-logo" src="http://sandbox.bittsdevelopment.com/code1/employeepics/' + employee.employeeid + '.jpg" />';
