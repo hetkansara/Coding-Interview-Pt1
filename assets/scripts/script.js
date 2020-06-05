@@ -39,10 +39,14 @@ function getHTMLElements(employees) {
     console.log(employee)
     let mainDiv = document.createElement("div");
     mainDiv.classList.add('info-content');
-    let crownP = document.createElement('p');
-    crownP.classList.add('crown');
-    crownP.innerHTML = (sanitizeHTML(employee.employeeisfeatured) == "1") ? '<img slot="crown-img" class="crown-img" src="assets/images/crown.png">' : '';
-    mainDiv.appendChild(crownP);
+    
+    if(employee.employeehaspic == "1") {
+      let crownP = document.createElement('p');
+      crownP.classList.add('crown');
+      crownP.innerHTML = (sanitizeHTML(employee.employeeisfeatured) == "1") ? '<img slot="crown-img" class="crown-img" src="assets/images/crown.png">' : '';
+      mainDiv.appendChild(crownP);
+    }
+    
     mainDiv.appendChild(document.createElement('br'));
     mainDiv.appendChild(document.createElement('br'));
     
